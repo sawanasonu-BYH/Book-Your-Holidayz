@@ -5,15 +5,26 @@ export const packages = [
     destination: "Dubai",
     duration: "5 Nights / 6 Days",
     price: "₹49,999",
-    inclusions: [
-      "4 Star Hotel Stay",
-      "Airport Transfers",
+
+    highlights: [
+      "4 Star Hotel Accommodation",
+      "Airport Pickup & Drop",
+      "Daily Breakfast",
       "Dubai City Tour",
       "Desert Safari",
-      "Daily Breakfast",
+      "Travel Assistance",
     ],
+
+    inclusions: [
+      "Hotel Stay",
+      "Airport Transfers",
+      "Sightseeing",
+      "Breakfast",
+    ],
+
     description:
-      "Experience the best of Dubai with luxury accommodation, iconic attractions and unforgettable experiences.",
+      "Experience the best of Dubai with luxury accommodation and unforgettable experiences.",
+
     itinerary: [
       {
         day: "Day 1",
