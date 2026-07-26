@@ -7,9 +7,9 @@ export default async function DestinationPage({
   params: Promise<{ slug: string }>;
 }) {
 
-  const destination = destinations.find(
-    (item) => item.slug === (await params).slug
-  );
+  const { slug } = await params;
+
+  const destination = destinations.find((item) => item.slug === slug);
 
 
   if (!destination) {
