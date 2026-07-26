@@ -41,6 +41,14 @@ export const packages = [
         description: "Transfer to airport for your return journey.",
       },
     ],
+    highlights: [
+      "4 Star Hotel Accommodation",
+      "Airport Pickup & Drop",
+      "Daily Breakfast",
+      "Sightseeing Tours",
+      "Local Transfers",
+      "Travel Assistance",
+    ],
   },
 
   {
