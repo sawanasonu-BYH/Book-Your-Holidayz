@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type Props = {
   highlights: string[];
 };
@@ -15,10 +17,14 @@ export default function PackageHighlights({
 
       <div className="mt-8 grid gap-6 md:grid-cols-3">
 
-        {highlights.map((item) => (
+        {highlights.map((item, idx) => (
 
-          <div
+          <motion.div
             key={item}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: idx * 0.06 }}
+            whileHover={{ scale: 1.02 }}
             className="rounded-2xl bg-blue-50 p-6"
           >
 
@@ -30,7 +36,7 @@ export default function PackageHighlights({
               {item}
             </p>
 
-          </div>
+          </motion.div>
 
         ))}
 
