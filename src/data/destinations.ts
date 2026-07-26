@@ -5,6 +5,11 @@ export const destinations = [
     country: "United Arab Emirates",
     description:
       "Experience luxury shopping, desert adventures, iconic landmarks and unforgettable experiences in Dubai.",
+    image: "/images/destinations/dubai.jpg",
+    startingPrice: "₹49,999",
+    rating: 4.9,
+    reviews: 320,
+    tags: ["Luxury", "Family", "Honeymoon"],
     attractions: [
       "Burj Khalifa",
       "Dubai Mall",
