@@ -1,34 +1,65 @@
 import React from "react";
-import Image from "next/image";
 
 const destinations = [
-  { id: 1, name: "Bali, Indonesia", image: "/globe.svg" },
-  { id: 2, name: "Paris, France", image: "/file.svg" },
-  { id: 3, name: "Kyoto, Japan", image: "/window.svg" },
-  { id: 4, name: "Cape Town, South Africa", image: "/next.svg" },
+  {
+    name: "Dubai",
+    description: "Luxury experiences, desert adventures and iconic attractions.",
+  },
+  {
+    name: "Maldives",
+    description: "Relax on pristine beaches with beautiful island resorts.",
+  },
+  {
+    name: "Bali",
+    description: "Tropical escapes, culture and unforgettable experiences.",
+  },
+  {
+    name: "Thailand",
+    description: "Beaches, nightlife and amazing holiday experiences.",
+  },
+  {
+    name: "Singapore",
+    description: "Modern city experiences with family-friendly attractions.",
+  },
+  {
+    name: "Europe",
+    description: "Explore history, culture and breathtaking landscapes.",
+  },
 ];
 
 export default function FeaturedDestinations() {
   return (
-    <section className="mt-12 px-6">
-      <h2 className="text-2xl font-semibold">Featured destinations</h2>
-      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {destinations.map((d) => (
-          <article key={d.id} className="rounded-lg border p-4 text-center">
-            <div className="mx-auto h-24 w-24">
-              <Image src={d.image} alt={d.name} width={96} height={96} />
-            </div>
-            <h3 className="mt-3 font-medium">{d.name}</h3>
-            <p className="mt-2 text-sm text-zinc-600">From $499</p>
-            <a
-              href="#"
-              className="mt-4 inline-block rounded-md bg-blue-600 px-4 py-2 text-white"
+    <section className="bg-gray-50 px-6 py-20">
+
+      <div className="mx-auto max-w-7xl">
+
+        <div className="mb-12 text-center">
+          <h2 className="text-4xl font-bold">Explore Top Destinations</h2>
+
+          <p className="mt-4 text-gray-600">Discover amazing places curated by our travel experts.</p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-3">
+
+          {destinations.map((destination) => (
+            <div
+              key={destination.name}
+              className="rounded-2xl bg-white p-8 shadow-md transition hover:-translate-y-1"
             >
-              Explore
-            </a>
-          </article>
-        ))}
+
+              <h3 className="text-2xl font-semibold text-blue-700">{destination.name}</h3>
+
+              <p className="mt-3 text-gray-600">{destination.description}</p>
+
+              <button className="mt-6 text-blue-600 font-medium">Explore More →</button>
+
+            </div>
+          ))}
+
+        </div>
+
       </div>
+
     </section>
   );
 }
