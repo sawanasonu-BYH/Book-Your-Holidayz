@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Book Your Holidayz
 
-## Getting Started
+A starter Next.js app for the Book Your Holidayz project. Bootstrapped with
+`create-next-app` using the App Router, TypeScript and Tailwind CSS.
 
-First, run the development server:
+## Development
+
+Install dependencies and run the development server:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# open http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Edit the homepage at `app/page.tsx`. The dev server reloads on file changes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `npm run dev` — start the development server
+- `npm run build` — build for production
+- `npm start` — start the production server after build
 
-## Learn More
+## Git
 
-To learn more about Next.js, take a look at the following resources:
+This repository is initialized locally. To push to a new GitHub repo:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a remote repo on GitHub (e.g. `book-your-holidayz`).
+2. Run:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+git remote add origin https://github.com/<your-username>/book-your-holidayz.git
+git branch -M main
+git push -u origin main
+```
 
-## Deploy on Vercel
+## Deploy
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy easily using Vercel. See Next.js docs for other hosting options:
+https://nextjs.org/docs/app/building-your-application/deploying
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+If you want, I can (pick one):
+
+- push this repo to GitHub for you (you'll need to provide the remote URL or grant access),
+- add a CI workflow, or
+- flesh out the homepage with booking components.
