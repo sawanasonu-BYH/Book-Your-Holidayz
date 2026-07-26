@@ -1,2 +1,5 @@
-export { default } from "../Navbar";
-export * from "./NavigationData";
+export { navigation } from "./NavigationData";
+export type {
+  NavigationItem,
+  NavigationChild,
+} from "./NavigationData";
