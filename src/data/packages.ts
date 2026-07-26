@@ -2,55 +2,51 @@ export const packages = [
   {
     slug: "dubai-luxury-escape",
     title: "Dubai Luxury Escape",
-    destination: "dubai",
-    summary: "5-night luxury escape with iconic attractions, desert safari and a yacht cruise.",
-    priceUSD: 1299,
-    duration: "5 nights",
+    destination: "Dubai",
+    duration: "5 Nights / 6 Days",
+    price: "₹49,999",
     inclusions: [
-      "Return economy flights (select gateways)",
-      "5-star hotel with daily breakfast",
-      "Desert safari with BBQ",
-      "Burj Khalifa 'At The Top' tickets",
-      "Dubai Marina yacht cruise"
-    ],
-    highlights: [
-      "Burj Khalifa",
+      "4 Star Hotel Stay",
+      "Airport Transfers",
+      "Dubai City Tour",
       "Desert Safari",
-      "Palm Jumeirah",
-      "Dubai Marina Yacht Cruise"
-    ]
+      "Daily Breakfast",
+    ],
+    description:
+      "Experience the best of Dubai with luxury accommodation, iconic attractions and unforgettable experiences.",
   },
 
   {
-    slug: "maldives-romantic-retreat",
-    title: "Maldives Romantic Retreat",
-    destination: "maldives",
-    summary: "A 6-night overwater-villa stay with snorkelling and sunset cruises.",
-    priceUSD: 2199,
-    duration: "6 nights",
+    slug: "maldives-island-retreat",
+    title: "Maldives Island Retreat",
+    destination: "Maldives",
+    duration: "4 Nights / 5 Days",
+    price: "₹69,999",
     inclusions: [
-      "Return flights (select gateways)",
-      "Overwater villa stay",
-      "Daily breakfast",
-      "One snorkelling trip",
-      "Sunset cruise"
+      "Island Resort Stay",
+      "Speedboat Transfers",
+      "Breakfast",
+      "Beach Activities",
+      "Island Experience",
     ],
-    highlights: ["Water Villas", "Snorkelling", "Private Dinners"]
+    description:
+      "Relax in a tropical paradise with crystal clear waters and luxury island experiences.",
   },
 
   {
-    slug: "bali-adventure-week",
-    title: "Bali Adventure Week",
-    destination: "bali",
-    summary: "7-day active itinerary: temples, waterfalls, and island hopping.",
-    priceUSD: 999,
-    duration: "7 days",
+    slug: "thailand-bangkok-pattaya",
+    title: "Thailand Bangkok & Pattaya",
+    destination: "Thailand",
+    duration: "5 Nights / 6 Days",
+    price: "₹39,999",
     inclusions: [
-      "Return flights (select gateways)",
-      "Hotel stay with breakfast",
-      "Daily guided excursions",
-      "Boat transfers to Nusa Penida"
+      "Hotel Stay",
+      "Airport Transfers",
+      "City Tours",
+      "Sightseeing",
+      "Breakfast",
     ],
-    highlights: ["Ubud", "Nusa Penida", "Waterfalls", "Tanah Lot"]
-  }
+    description:
+      "Explore Bangkok and Pattaya with amazing attractions and cultural experiences.",
+  },
 ];
