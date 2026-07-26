@@ -71,7 +71,9 @@ export default async function PackagePage({
           </div>
 
           {holidayPackage.highlights && (
-            <PackageHighlights highlights={holidayPackage.highlights} />
+            <PackageHighlights
+              highlights={holidayPackage.highlights}
+            />
           )}
 
           {/* Render itinerary if present */}
