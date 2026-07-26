@@ -1,7 +1,10 @@
-export default function Home() {
+import Layout from "../src/components/Layout";
+import Home from "../src/components/Home";
+
+export default function Page() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
-      <h1 className="text-5xl font-bold">Book Your Holidayz</h1>
-    </main>
+    <Layout>
+      <Home />
+    </Layout>
   );
 }
