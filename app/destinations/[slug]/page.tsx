@@ -1,15 +1,15 @@
 import { destinations } from "@/data/destinations";
 import { notFound } from "next/navigation";
 
-export default function DestinationPage({
+export default async function DestinationPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
 
-  const destination = destinations.find(
-    (item) => item.slug === params.slug
-  );
+  const { slug } = await params;
+
+  const destination = destinations.find((item) => item.slug === slug);
 
 
   if (!destination) {
