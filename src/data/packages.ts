@@ -14,6 +14,33 @@ export const packages = [
     ],
     description:
       "Experience the best of Dubai with luxury accommodation, iconic attractions and unforgettable experiences.",
+    itinerary: [
+      {
+        day: "Day 1",
+        title: "Arrival in Dubai",
+        description: "Airport pickup, transfer to hotel and leisure time.",
+      },
+      {
+        day: "Day 2",
+        title: "Dubai City Tour",
+        description: "Explore Burj Khalifa, Dubai Mall and iconic landmarks.",
+      },
+      {
+        day: "Day 3",
+        title: "Desert Safari",
+        description: "Enjoy dune bashing, entertainment and dinner experience.",
+      },
+      {
+        day: "Day 4",
+        title: "Shopping & Leisure",
+        description: "Free day for shopping and personal exploration.",
+      },
+      {
+        day: "Day 5",
+        title: "Departure",
+        description: "Transfer to airport for your return journey.",
+      },
+    ],
   },
 
   {
