@@ -1,22 +1,14 @@
-import React from "react";
+import Container from "@/components/shared/Container";
+import HeroContent from "./HeroContent";
+import HeroImage from "./HeroImage";
 
 export default function Hero() {
   return (
-    <section className="flex min-h-[60vh] items-center justify-center bg-gradient-to-b from-white to-zinc-50 dark:from-black">
-      <div className="max-w-3xl px-6 text-center">
-        <h1 className="text-5xl font-extrabold">Plan your perfect getaway</h1>
-        <p className="mt-4 text-lg text-zinc-600 dark:text-zinc-300">
-          Search flights, hotels and complete holiday packages in one place.
-        </p>
-        <div className="mt-8 flex justify-center">
-          <a
-            href="#"
-            className="rounded-md bg-blue-600 px-6 py-3 text-white hover:bg-blue-700"
-          >
-            Get started
-          </a>
-        </div>
-      </div>
+    <section className="relative overflow-hidden bg-gradient-to-br from-[#0F4C81] via-[#1D70B8] to-[#4DA8DA] text-white">
+      <Container className="grid min-h-[90vh] items-center gap-16 py-20 lg:grid-cols-2">
+        <HeroContent />
+        <HeroImage />
+      </Container>
     </section>
   );
 }
