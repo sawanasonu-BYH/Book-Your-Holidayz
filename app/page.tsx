@@ -1,10 +1,11 @@
-import Layout from "../src/components/Layout";
-import Home from "../src/components/Home";
+import Navbar from "@/components/layout/Navbar";
+import Hero from "@/components/home/Hero";
 
-export default function Page() {
+export default function Home() {
   return (
-    <Layout>
-      <Home />
-    </Layout>
+    <>
+      <Navbar />
+      <Hero />
+    </>
   );
 }
