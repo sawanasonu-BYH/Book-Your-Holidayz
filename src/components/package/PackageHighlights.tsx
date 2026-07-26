@@ -1,23 +1,41 @@
-import React from "react";
+type Props = {
+  highlights: string[];
+};
 
 export default function PackageHighlights({
   highlights,
-}: {
-  highlights: string[];
-}) {
-  if (!highlights || highlights.length === 0) return null;
-
+}: Props) {
   return (
-    <section className="mt-8">
-      <h3 className="text-2xl font-semibold">Highlights</h3>
-      <ul className="mt-4 grid gap-3 sm:grid-cols-2">
-        {highlights.map((h) => (
-          <li key={h} className="flex items-start gap-3">
-            <span className="text-blue-600">✓</span>
-            <span className="text-gray-700">{h}</span>
-          </li>
+    <section className="mt-16">
+
+      <h2 className="text-3xl font-bold">
+        Package Highlights
+      </h2>
+
+
+      <div className="mt-8 grid gap-6 md:grid-cols-3">
+
+        {highlights.map((item) => (
+
+          <div
+            key={item}
+            className="rounded-2xl bg-blue-50 p-6"
+          >
+
+            <div className="text-2xl">
+              ✓
+            </div>
+
+            <p className="mt-3 font-medium">
+              {item}
+            </p>
+
+          </div>
+
         ))}
-      </ul>
+
+      </div>
+
     </section>
   );
 }
