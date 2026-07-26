@@ -1,5 +1,6 @@
 import { packages } from "@/data/packages";
 import { notFound } from "next/navigation";
+import PackageItinerary from "@/components/packages/PackageItinerary";
 
 export default async function PackagePage({
   params,
@@ -67,6 +68,13 @@ export default async function PackagePage({
 
 
           </div>
+
+          {/* Render itinerary if present */}
+          {holidayPackage.itinerary && (
+            <div className="md:col-span-2">
+              <PackageItinerary itinerary={holidayPackage.itinerary} />
+            </div>
+          )}
 
 
           <div className="rounded-2xl bg-blue-50 p-8">
