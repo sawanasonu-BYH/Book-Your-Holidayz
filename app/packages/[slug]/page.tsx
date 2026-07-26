@@ -1,6 +1,7 @@
 import { packages } from "@/data/packages";
 import { notFound } from "next/navigation";
 import PackageItinerary from "@/components/packages/PackageItinerary";
+import PackageHighlights from "@/components/package/PackageHighlights";
 
 export default async function PackagePage({
   params,
@@ -68,6 +69,10 @@ export default async function PackagePage({
 
 
           </div>
+
+          {holidayPackage.highlights && (
+            <PackageHighlights highlights={holidayPackage.highlights} />
+          )}
 
           {/* Render itinerary if present */}
           {holidayPackage.itinerary && (
