@@ -71,9 +71,7 @@ export default async function PackagePage({
 
           {/* Render itinerary if present */}
           {holidayPackage.itinerary && (
-            <div className="md:col-span-2">
-              <PackageItinerary itinerary={holidayPackage.itinerary} />
-            </div>
+            <PackageItinerary itinerary={holidayPackage.itinerary} />
           )}
 
 
