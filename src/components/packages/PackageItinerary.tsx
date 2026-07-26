@@ -1,5 +1,3 @@
-import React from "react";
-
 type ItineraryItem = {
   day: string;
   title: string;
@@ -8,27 +6,44 @@ type ItineraryItem = {
 
 export default function PackageItinerary({
   itinerary,
-  className,
 }: {
   itinerary: ItineraryItem[];
-  className?: string;
 }) {
-  if (!itinerary || itinerary.length === 0) return null;
-
   return (
-    <aside className={className}>
-      <h3 className="text-2xl font-semibold">Itinerary</h3>
-      <ol className="mt-4 space-y-6">
+    <section className="mt-16">
+
+      <h2 className="text-3xl font-bold">
+        Day Wise Itinerary
+      </h2>
+
+
+      <div className="mt-8 space-y-6">
+
         {itinerary.map((item) => (
-          <li key={item.day} className="flex gap-4">
-            <div className="min-w-[96px] text-sm font-medium text-blue-700">{item.day}</div>
-            <div>
-              <div className="text-lg font-semibold">{item.title}</div>
-              <p className="mt-1 text-gray-600">{item.description}</p>
+
+          <div
+            key={item.day}
+            className="rounded-2xl border bg-white p-6 shadow-sm"
+          >
+
+            <div className="text-blue-600 font-bold">
+              {item.day}
             </div>
-          </li>
+
+            <h3 className="mt-2 text-xl font-semibold">
+              {item.title}
+            </h3>
+
+            <p className="mt-3 text-gray-600">
+              {item.description}
+            </p>
+
+          </div>
+
         ))}
-      </ol>
-    </aside>
+
+      </div>
+
+    </section>
   );
 }
