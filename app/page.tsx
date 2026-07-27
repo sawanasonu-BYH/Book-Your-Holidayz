@@ -1,4 +1,3 @@
-import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/home/Hero";
 import FeaturedDestinations from "@/components/home/FeaturedDestinations";
@@ -9,12 +8,13 @@ import EnquirySection from "@/components/home/EnquirySection";
 import Testimonials from "@/components/home/Testimonials";
 import BlogPreview from "@/components/home/BlogPreview";
 import ContactSection from "@/components/home/ContactSection";
+import App from "next/app";
 
 export default function Home() {
   return (
     <>
-      <Navbar />
       <Hero />
+      {/* Existing homepage sections */}
       <FeaturedDestinations />
       <PopularPackages />
       <WhyChooseUs />
@@ -27,3 +27,4 @@ export default function Home() {
     </>
   );
 }
+
