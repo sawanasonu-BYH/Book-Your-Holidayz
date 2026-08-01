@@ -1,98 +1,40 @@
 export const packages = [
   {
-    slug: "dubai-luxury-escape",
+    slug: "dubai-luxury-5d",
     title: "Dubai Luxury Escape",
     destination: "Dubai",
-    duration: "5 Nights / 6 Days",
-    price: "₹49,999",
-
-    highlights: [
-      "4 Star Hotel Accommodation",
-      "Airport Pickup & Drop",
-      "Daily Breakfast",
-      "Dubai City Tour",
-      "Desert Safari",
-      "Travel Assistance",
-    ],
-
-    inclusions: [
-      "Hotel Stay",
-      "Airport Transfers",
-      "Sightseeing",
-      "Breakfast",
-    ],
-
-    description:
-      "Experience the best of Dubai with luxury accommodation and unforgettable experiences.",
-
-    itinerary: [
-      {
-        day: "Day 1",
-        title: "Arrival in Dubai",
-        description: "Airport pickup, transfer to hotel and leisure time.",
-      },
-      {
-        day: "Day 2",
-        title: "Dubai City Tour",
-        description: "Explore Burj Khalifa, Dubai Mall and iconic landmarks.",
-      },
-      {
-        day: "Day 3",
-        title: "Desert Safari",
-        description: "Enjoy dune bashing, entertainment and dinner experience.",
-      },
-      {
-        day: "Day 4",
-        title: "Shopping & Leisure",
-        description: "Free day for shopping and personal exploration.",
-      },
-      {
-        day: "Day 5",
-        title: "Departure",
-        description: "Transfer to airport for your return journey.",
-      },
-    ],
-    highlights: [
-      "4 Star Hotel Accommodation",
-      "Airport Pickup & Drop",
-      "Daily Breakfast",
-      "Sightseeing Tours",
-      "Local Transfers",
-      "Travel Assistance",
-    ],
+    duration: "5 Days / 4 Nights",
+    price: "₹34,999",
+    hotel: "4 Star Hotel",
+    meals: "Breakfast",
+    flights: true,
+    image:
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1600&q=80",
   },
 
   {
-    slug: "maldives-island-retreat",
-    title: "Maldives Island Retreat",
+    slug: "bali-honeymoon",
+    title: "Bali Honeymoon",
+    destination: "Bali",
+    duration: "6 Days / 5 Nights",
+    price: "₹42,999",
+    hotel: "Private Pool Villa",
+    meals: "Breakfast",
+    flights: true,
+    image:
+      "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=1600&q=80",
+  },
+
+  {
+    slug: "maldives-water-villa",
+    title: "Maldives Water Villa",
     destination: "Maldives",
-    duration: "4 Nights / 5 Days",
-    price: "₹69,999",
-    inclusions: [
-      "Island Resort Stay",
-      "Speedboat Transfers",
-      "Breakfast",
-      "Beach Activities",
-      "Island Experience",
-    ],
-    description:
-      "Relax in a tropical paradise with crystal clear waters and luxury island experiences.",
-  },
-
-  {
-    slug: "thailand-bangkok-pattaya",
-    title: "Thailand Bangkok & Pattaya",
-    destination: "Thailand",
-    duration: "5 Nights / 6 Days",
-    price: "₹39,999",
-    inclusions: [
-      "Hotel Stay",
-      "Airport Transfers",
-      "City Tours",
-      "Sightseeing",
-      "Breakfast",
-    ],
-    description:
-      "Explore Bangkok and Pattaya with amazing attractions and cultural experiences.",
+    duration: "5 Days / 4 Nights",
+    price: "₹54,999",
+    hotel: "Water Villa",
+    meals: "All Inclusive",
+    flights: true,
+    image:
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1600&q=80",
   },
 ];

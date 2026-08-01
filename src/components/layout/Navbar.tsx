@@ -1,65 +1,44 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import DesktopMenu from "./Navbar/DesktopMenu";
-import MobileMenu from "./Navbar/MobileMenu";
+
+const menu = [
+  { name: "Home", href: "/" },
+  { name: "Destinations", href: "/destinations" },
+  { name: "Packages", href: "/packages" },
+  { name: "Visa", href: "/visa" },
+  { name: "Flights", href: "/flights" },
+  { name: "Hotels", href: "/hotels" },
+  { name: "About", href: "/about" },
+  { name: "Contact", href: "/contact" },
+];
 
 export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 30);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
   return (
-    <header
-      className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 shadow-lg backdrop-blur-md"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 shadow-md backdrop-blur">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
-        <Link href="/" className="flex items-center gap-3">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#0F4C81] text-xl font-bold text-white">
-            BY
-          </div>
-
-          <div className="hidden sm:block">
-            <h2 className="text-lg font-bold text-[#0F4C81]">
-              Book Your Holidayz
-            </h2>
-
-            <p className="text-xs text-gray-500">Book • Explore • Repeat</p>
-          </div>
+        <Link href="/" className="text-2xl font-bold text-blue-700">
+          Book Your Holidayz
         </Link>
 
-        <DesktopMenu />
+        <nav className="hidden items-center gap-8 lg:flex">
+          {menu.map((item) => (
+            <Link
+              key={item.name}
+              href={item.href}
+              className="font-medium text-gray-700 transition hover:text-blue-700"
+            >
+              {item.name}
+            </Link>
+          ))}
+        </nav>
 
-        <div className="hidden items-center gap-4 lg:flex">
-          <a
-            href="tel:+918890414339"
-            className="rounded-full border border-[#0F4C81] px-4 py-2 text-sm font-semibold text-[#0F4C81] transition hover:bg-[#0F4C81] hover:text-white"
-          >
-            📞 8890414339
-          </a>
-
-          <Link
-            href="/contact"
-            className="rounded-full bg-[#0F4C81] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#0b3a63]"
-          >
-            Get a Quote
-          </Link>
-        </div>
-
-        <MobileMenu />
+        <Link
+          href="/enquiry"
+          className="rounded-full bg-blue-700 px-6 py-3 font-semibold text-white hover:bg-blue-800"
+        >
+          Get Free Quote
+        </Link>
       </div>
     </header>
   );

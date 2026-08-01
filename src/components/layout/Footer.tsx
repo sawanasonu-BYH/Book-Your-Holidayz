@@ -1,43 +1,75 @@
-import React from "react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 px-6 py-12 text-white">
-      <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-4">
-        <div>
-          <h2 className="text-2xl font-bold">Book Your Holidayz</h2>
-          <p className="mt-4 text-gray-400">Book, Explore and Repeat.</p>
+    <footer className="bg-slate-900 text-white">
+      <div className="mx-auto max-w-7xl px-6 py-16">
+
+        <div className="grid gap-12 md:grid-cols-4">
+
+          {/* Company */}
+          <div>
+            <h2 className="text-2xl font-bold">
+              Book Your Holidayz
+            </h2>
+
+            <p className="mt-4 text-gray-300 leading-7">
+              Your trusted travel partner for unforgettable domestic and
+              international holidays.
+            </p>
+          </div>
+
+          {/* Destinations */}
+          <div>
+            <h3 className="mb-4 text-xl font-semibold">
+              Top Destinations
+            </h3>
+
+            <ul className="space-y-2 text-gray-300">
+              <li>Dubai</li>
+              <li>Bali</li>
+              <li>Maldives</li>
+              <li>Thailand</li>
+              <li>Singapore</li>
+              <li>Vietnam</li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div>
+            <h3 className="mb-4 text-xl font-semibold">
+              Our Services
+            </h3>
+
+            <ul className="space-y-2 text-gray-300">
+              <li>Holiday Packages</li>
+              <li>Flight Booking</li>
+              <li>Hotel Booking</li>
+              <li>Visa Assistance</li>
+              <li>Travel Insurance</li>
+              <li>Corporate Travel</li>
+            </ul>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="mb-4 text-xl font-semibold">
+              Contact Us
+            </h3>
+
+            <ul className="space-y-3 text-gray-300">
+              <li>📞 +91 8890414339</li>
+              <li>✉️ sawan_panchal@yahoo.com</li>
+              <li>📍 Dungarpur, Rajasthan</li>
+            </ul>
+          </div>
+
         </div>
 
-        <div>
-          <h3 className="font-semibold">Services</h3>
-          <ul className="mt-4 space-y-2 text-gray-400">
-            <li>Holiday Packages</li>
-            <li>Flights</li>
-            <li>Hotels</li>
-            <li>Visa Assistance</li>
-          </ul>
+        <div className="mt-12 border-t border-slate-700 pt-8 text-center text-gray-400">
+          © {new Date().getFullYear()} Book Your Holidayz. All Rights Reserved.
         </div>
 
-        <div>
-          <h3 className="font-semibold">Destinations</h3>
-          <ul className="mt-4 space-y-2 text-gray-400">
-            <li>Dubai</li>
-            <li>Maldives</li>
-            <li>Bali</li>
-            <li>Thailand</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="font-semibold">Contact</h3>
-          <p className="mt-4 text-gray-400">8890414339</p>
-          <p className="text-gray-400">sawan_panchal@yahoo.com</p>
-        </div>
-      </div>
-
-      <div className="mt-10 border-t border-gray-700 pt-6 text-center text-gray-400">
-        © {new Date().getFullYear()} Book Your Holidayz. All rights reserved.
       </div>
     </footer>
   );

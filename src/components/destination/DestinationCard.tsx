@@ -20,56 +20,58 @@ export default function DestinationCard({ destination }: Props) {
   return (
     <Link
       href={`/destinations/${destination.slug}`}
-      className="group relative block overflow-hidden rounded-2xl"
+      className="group overflow-hidden rounded-3xl bg-white shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
     >
-      <div className="relative h-48 w-full">
+      <div className="relative h-64 overflow-hidden">
         {destination.image ? (
           <Image
             src={destination.image}
             alt={destination.name}
             fill
-            className="object-cover transition-transform group-hover:scale-105"
-            sizes="(min-width: 1024px) 33vw, 50vw"
+            className="object-cover transition duration-500 group-hover:scale-110"
+            sizes="(min-width:1024px) 33vw,100vw"
           />
         ) : (
           <div className="h-full w-full bg-gray-200" />
         )}
-      </div>
 
-      <div className="mt-3 flex items-center justify-between">
-        <div>
-          <h3 className="text-lg font-semibold text-gray-900">{destination.name}</h3>
-          {destination.country && (
-            <p className="text-sm text-gray-500">{destination.country}</p>
-          )}
+        <div className="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-sm font-semibold shadow">
+          {destination.rating ?? "4.8"} ★
         </div>
 
-        <div className="text-right">
-          {destination.startingPrice && (
-            <div className="text-sm text-gray-700">From</div>
-          )}
-          <div className="text-lg font-bold text-gray-900">
-            {destination.startingPrice}
-          </div>
+        <div className="absolute bottom-4 right-4 rounded-full bg-blue-700 px-4 py-2 text-sm font-semibold text-white">
+          {destination.startingPrice ?? "Contact Us"}
         </div>
       </div>
 
-      <div className="mt-3 flex items-center justify-between">
-        <div className="flex items-center gap-2 text-sm text-gray-600">
-          <span>⭐ {destination.rating ?? "-"}</span>
-          <span>·</span>
-          <span>{destination.reviews ?? 0} reviews</span>
-        </div>
+      <div className="p-6">
+        <h3 className="text-2xl font-bold text-gray-900">
+          {destination.name}
+        </h3>
 
-        <div className="flex gap-2">
-          {destination.tags?.slice(0, 2).map((t) => (
+        <p className="mt-1 text-gray-500">
+          {destination.country}
+        </p>
+
+        <div className="mt-4 flex flex-wrap gap-2">
+          {destination.tags?.map((tag) => (
             <span
-              key={t}
-              className="rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-700"
+              key={tag}
+              className="rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700"
             >
-              {t}
+              {tag}
             </span>
           ))}
+        </div>
+
+        <div className="mt-6 flex items-center justify-between">
+          <span className="text-sm text-gray-500">
+            {destination.reviews ?? 250}+ Happy Travellers
+          </span>
+
+          <span className="rounded-xl bg-blue-700 px-5 py-2 font-semibold text-white transition hover:bg-blue-800">
+            View Package
+          </span>
         </div>
       </div>
     </Link>

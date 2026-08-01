@@ -1,52 +1,47 @@
-import React from "react";
-
 const services = [
   {
-    title: "Holiday Packages",
-    description:
-      "Domestic and international holiday packages designed for families, couples and groups.",
-    icon: "🌴",
+    title: "International Holidays",
+    icon: "🌍",
+    description: "Customized holiday packages across the world.",
   },
   {
-    title: "Flight Tickets",
-    description:
-      "Affordable domestic and international flight bookings with expert assistance.",
+    title: "Domestic Tours",
+    icon: "🏔️",
+    description: "Explore India's most beautiful destinations.",
+  },
+  {
+    title: "Flight Bookings",
     icon: "✈️",
+    description: "Best airfare deals for domestic and international flights.",
   },
   {
-    title: "Hotel Bookings",
-    description:
-      "Handpicked hotels and resorts offering comfort, quality and great value.",
+    title: "Hotel Reservations",
     icon: "🏨",
+    description: "Luxury, budget and boutique hotels worldwide.",
   },
   {
     title: "Visa Assistance",
-    description:
-      "Complete visa support and guidance for your international travel plans.",
-    icon: "🛂",
-  },
-  {
-    title: "Train Bookings",
-    description:
-      "Convenient railway reservations for smooth domestic journeys.",
-    icon: "🚆",
+    icon: "📄",
+    description: "Fast and reliable visa documentation support.",
   },
   {
     title: "Travel Insurance",
-    description:
-      "Travel protection solutions for a worry-free holiday experience.",
     icon: "🛡️",
+    description: "Travel confidently with comprehensive insurance.",
   },
 ];
 
 export default function Services() {
   return (
-    <section className="px-6 py-20">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold">Our Travel Services</h2>
-          <p className="mt-4 text-gray-600">
-            Everything you need for a smooth and memorable journey.
+    <section className="bg-gray-50 py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-14 text-center">
+          <h2 className="text-5xl font-bold">
+            Our Travel Services
+          </h2>
+
+          <p className="mt-4 text-lg text-gray-600">
+            Everything you need for a hassle-free holiday.
           </p>
         </div>
 
@@ -54,11 +49,19 @@ export default function Services() {
           {services.map((service) => (
             <div
               key={service.title}
-              className="rounded-2xl border bg-white p-8 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              className="rounded-3xl bg-white p-8 shadow-lg transition duration-300 hover:-translate-y-2 hover:shadow-2xl"
             >
-              <div className="text-4xl">{service.icon}</div>
-              <h3 className="mt-5 text-xl font-bold">{service.title}</h3>
-              <p className="mt-3 text-gray-600">{service.description}</p>
+              <div className="text-5xl">
+                {service.icon}
+              </div>
+
+              <h3 className="mt-6 text-2xl font-bold">
+                {service.title}
+              </h3>
+
+              <p className="mt-4 text-gray-600 leading-7">
+                {service.description}
+              </p>
             </div>
           ))}
         </div>

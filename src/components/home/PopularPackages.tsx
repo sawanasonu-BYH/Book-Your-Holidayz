@@ -1,71 +1,76 @@
-import React from "react";
-
 const packages = [
   {
-    title: "Dubai Luxury Escape",
-    duration: "5 Nights / 6 Days",
-    price: "Starting from ₹49,999",
-    details: "Hotel | Transfers | Sightseeing | Breakfast",
+    name: "Dubai Luxury Escape",
+    image:
+      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1200&q=80",
+    duration: "5 Days / 4 Nights",
+    price: "₹34,999",
   },
   {
-    title: "Maldives Island Retreat",
-    duration: "4 Nights / 5 Days",
-    price: "Starting from ₹69,999",
-    details: "Resort Stay | Transfers | Breakfast | Beach Experience",
+    name: "Bali Honeymoon",
+    image:
+      "https://images.unsplash.com/photo-1537953773345-d172ccf13cf1?w=1200&q=80",
+    duration: "6 Days / 5 Nights",
+    price: "₹42,999",
   },
   {
-    title: "Thailand Holiday Package",
-    duration: "5 Nights / 6 Days",
-    price: "Starting from ₹39,999",
-    details: "Hotel | Tours | Transfers | Breakfast",
-  },
-  {
-    title: "Bali Paradise Tour",
-    duration: "6 Nights / 7 Days",
-    price: "Starting from ₹55,999",
-    details: "Villa Stay | Sightseeing | Transfers",
+    name: "Maldives Water Villa",
+    image:
+      "https://images.unsplash.com/photo-1573843981267-be1999ff37cd?w=1200&q=80",
+    duration: "5 Days / 4 Nights",
+    price: "₹54,999",
   },
 ];
 
 export default function PopularPackages() {
   return (
-    <section className="px-6 py-20">
-
-      <div className="mx-auto max-w-7xl">
-
+    <section className="bg-white py-24">
+      <div className="mx-auto max-w-7xl px-6">
         <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold">Popular Holiday Packages</h2>
+          <h2 className="text-5xl font-bold">
+            Popular Holiday Packages
+          </h2>
 
-          <p className="mt-4 text-gray-600">Handpicked holidays designed for unforgettable experiences.</p>
+          <p className="mt-4 text-lg text-gray-500">
+            Hand-picked packages loved by thousands of travellers.
+          </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-
+        <div className="grid gap-8 md:grid-cols-3">
           {packages.map((pkg) => (
             <div
-              key={pkg.title}
-              className="rounded-2xl bg-white p-6 shadow-lg transition hover:-translate-y-2"
+              key={pkg.name}
+              className="overflow-hidden rounded-3xl bg-white shadow-xl transition hover:-translate-y-2 hover:shadow-2xl"
             >
+              <img
+                src={pkg.image}
+                alt={pkg.name}
+                className="h-72 w-full object-cover"
+              />
 
-              <h3 className="text-xl font-bold">{pkg.title}</h3>
+              <div className="p-6">
+                <h3 className="text-2xl font-bold">
+                  {pkg.name}
+                </h3>
 
-              <p className="mt-3 text-gray-600">{pkg.duration}</p>
+                <p className="mt-2 text-gray-500">
+                  {pkg.duration}
+                </p>
 
-              <p className="mt-4 text-2xl font-bold text-blue-700">{pkg.price}</p>
+                <div className="mt-6 flex items-center justify-between">
+                  <span className="text-2xl font-bold text-blue-700">
+                    {pkg.price}
+                  </span>
 
-              <p className="mt-4 text-sm text-gray-600">{pkg.details}</p>
-
-              <button className="mt-6 w-full rounded-full bg-blue-600 py-3 text-white hover:bg-blue-700">
-                Enquire Now
-              </button>
-
+                  <button className="rounded-full bg-blue-700 px-5 py-3 text-white hover:bg-blue-800">
+                    Book Now
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }

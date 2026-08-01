@@ -1,123 +1,36 @@
+import Inclusions from "@/components/package/Inclusions";
+import Exclusions from "@/components/package/Exclusions";
+import Itinerary from "@/components/package/Itinerary";
+import BookingCard from "@/components/package/BookingCard";
+import Reviews from "@/components/package/Reviews";
 import { packages } from "@/data/packages";
-import { notFound } from "next/navigation";
-import PackageItinerary from "@/components/packages/PackageItinerary";
-import PackageHighlights from "@/components/package/PackageHighlights";
+import Image from "next/image";
+import Link from "next/link";
 
-export default async function PackagePage({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-
-  const { slug } = await params;
-
-  const holidayPackage = packages.find(
-    (item) => item.slug === slug
-  );
-
-
-  if (!holidayPackage) {
-    notFound();
-  }
-
-
+export default function PackagesPage() {
   return (
-    <main className="min-h-screen">
+    <main className="bg-gray-50">
 
-      {/* Hero Section */}
-      <section className="bg-blue-900 px-6 py-32 text-white">
+      <section className="mx-auto max-w-7xl px-6 py-20">
 
-        <div className="mx-auto max-w-7xl">
+  <div className="grid gap-12 lg:grid-cols-3">
 
-          <h1 className="text-5xl font-bold">
-            {holidayPackage.title}
-          </h1>
+    <div className="lg:col-span-2">
 
-          <p className="mt-4 text-xl">
-            {holidayPackage.destination}
-          </p>
+      {/* Overview */}
 
-        </div>
+      {/* Itinerary */}
 
-      </section>
+      {/* Inclusions */}
 
+      {/* Exclusions */}
+      
+      {/*Reviews */}
 
-      {/* Package Details */}
-      <section className="mx-auto max-w-7xl px-6 py-16">
+    </div>
 
-        <div className="grid gap-10 md:grid-cols-2">
+    <BookingCard />
 
+  </div>
 
-          <div>
-
-            <h2 className="text-3xl font-bold">
-              Package Overview
-            </h2>
-
-            <p className="mt-4 text-gray-600">
-              {holidayPackage.description}
-            </p>
-
-
-            <h3 className="mt-8 text-2xl font-bold">
-              Duration
-            </h3>
-
-            <p className="mt-2 text-gray-600">
-              {holidayPackage.duration}
-            </p>
-
-
-          </div>
-
-          {holidayPackage.highlights && (
-            <PackageHighlights
-              highlights={holidayPackage.highlights}
-            />
-          )}
-
-          {/* Render itinerary if present */}
-          {holidayPackage.itinerary && (
-            <PackageItinerary itinerary={holidayPackage.itinerary} />
-          )}
-
-
-          <div className="rounded-2xl bg-blue-50 p-8">
-
-            <h2 className="text-3xl font-bold text-blue-700">
-              {holidayPackage.price}
-            </h2>
-
-
-            <h3 className="mt-8 text-xl font-bold">
-              Package Includes
-            </h3>
-
-
-            <ul className="mt-4 space-y-3">
-
-              {holidayPackage.inclusions.map((item) => (
-                <li key={item}>
-                  ✓ {item}
-                </li>
-              ))}
-
-            </ul>
-
-
-            <button className="mt-8 w-full rounded-full bg-blue-600 py-4 text-white">
-              Enquire Now
-            </button>
-
-
-          </div>
-
-
-        </div>
-
-      </section>
-
-
-    </main>
-  );
-}
+</section>

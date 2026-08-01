@@ -1,43 +1,61 @@
-import React from "react";
-
 const testimonials = [
   {
     name: "Rahul Sharma",
+    location: "Jaipur",
     review:
-      "Amazing experience! The team helped us plan our Dubai holiday perfectly. Everything was smooth from flights to hotels.",
+      "Book Your Holidayz planned our Dubai trip perfectly. Everything from flights to hotels was seamless.",
   },
   {
-    name: "Priya Mehta",
+    name: "Priya Patel",
+    location: "Ahmedabad",
     review:
-      "Book Your Holidayz made our Maldives trip memorable. Great support and excellent service throughout the journey.",
+      "Amazing Bali honeymoon package with excellent support throughout the journey. Highly recommended!",
   },
   {
-    name: "Amit Patel",
+    name: "Amit Verma",
+    location: "Delhi",
     review:
-      "Professional travel assistance with quick responses. Highly recommended for family vacations.",
+      "Best prices, professional service and quick responses. Will definitely book again.",
   },
 ];
 
 export default function Testimonials() {
   return (
-    <section className="bg-gray-50 px-6 py-20">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-12 text-center">
-          <h2 className="text-4xl font-bold">What Our Travellers Say</h2>
-          <p className="mt-4 text-gray-600">
-            Trusted by travellers for memorable holiday experiences.
+    <section className="bg-white py-24">
+      <div className="mx-auto max-w-7xl px-6">
+        <div className="mb-14 text-center">
+          <h2 className="text-5xl font-bold">
+            What Our Travellers Say
+          </h2>
+
+          <p className="mt-4 text-lg text-gray-600">
+            Trusted by happy travellers across India.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <div
               key={testimonial.name}
-              className="rounded-2xl bg-white p-8 shadow-md"
+              className="rounded-3xl bg-gray-50 p-8 shadow-lg"
             >
-              <div className="text-4xl text-blue-600">“</div>
-              <p className="mt-4 text-gray-600">{testimonial.review}</p>
-              <h3 className="mt-6 font-bold">{testimonial.name}</h3>
+              <div className="mb-4 text-yellow-500 text-xl">
+                ★★★★★
+              </div>
+
+              <p className="leading-7 text-gray-600">
+                "{testimonial.review}"
+              </p>
+
+              <div className="mt-8">
+                <h3 className="text-xl font-bold">
+                  {testimonial.name}
+                </h3>
+
+                <p className="text-gray-500">
+                  {testimonial.location}
+                </p>
+              </div>
             </div>
           ))}
         </div>
